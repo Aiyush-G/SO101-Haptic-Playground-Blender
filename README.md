@@ -21,7 +21,9 @@ The SO101 Haptic Digital Twin is a Blender-native robotics playground that turns
 - Grasp stability scoring
 - Benchmark scenes
 
-## Proposed Technical Architecture
+## Technical Architecture
+
+```mermaid
 flowchart TD
     A["User / Developer"]
 
@@ -56,13 +58,12 @@ flowchart TD
     • Isaac Sim roadmap"]
 
     F["Validation + Benchmarks<br/>
-    • Pick-and-place<br/>
     • Push-and-slide<br/>
     • Press-compliance<br/>
-    • Metrics report<br/>
     • Demo video"]
 
     A --> B --> C --> D --> E --> F
+```
 
 ## Limitations
 - Not a high-fidelity physics simulator
