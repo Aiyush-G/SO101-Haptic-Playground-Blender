@@ -4,6 +4,8 @@ A Blender-native digital twin and haptic material playground for the LeRobot SO1
 ## Vision
 The SO101 Haptic Digital Twin is a Blender-native robotics playground that turns the Hugging Face LeRobot SO101 arm into an interactive, material-aware digital twin for learning, debugging, and demonstrating manipulation. It allows developers to control the arm through joints, IK targets, and trajectory replay while visualising contact, friction, compliance, slip, deformation proxies, and grasp stability across different material profiles. The project is designed as a lightweight bridge between accessible robotics education and simulation-first Physical AI workflows, with a roadmap toward LeRobot policy replay, ROS 2, URDF/USD export, and higher-fidelity Isaac Sim-style digital twin environments.
 
+![SO101 Haptic Digital Twin cover](media/03CoverImageAnnotated.png)
+
 ## Why this exists
 - LeRobot makes real-world robotics more accessible.
 - There is still a need for intuitive tools for understanding contact, materials, and manipulation failure.
