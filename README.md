@@ -1,6 +1,9 @@
 # SO101 Haptic Digital Twin
 A Blender-native digital twin and haptic material playground for the LeRobot SO101 arm.
 
+## Vision
+The SO101 Haptic Digital Twin is a Blender-native robotics playground that turns the Hugging Face LeRobot SO101 arm into an interactive, material-aware digital twin for learning, debugging, and demonstrating manipulation. It allows developers to control the arm through joints, IK targets, and trajectory replay while visualising contact, friction, compliance, slip, deformation proxies, and grasp stability across different material profiles. The project is designed as a lightweight bridge between accessible robotics education and simulation-first Physical AI workflows, with a roadmap toward LeRobot policy replay, ROS 2, URDF/USD export, and higher-fidelity Isaac Sim-style digital twin environments.
+
 ## Why this exists
 - LeRobot makes real-world robotics more accessible.
 - There is still a need for intuitive tools for understanding contact, materials, and manipulation failure.
@@ -17,6 +20,49 @@ A Blender-native digital twin and haptic material playground for the LeRobot SO1
 - Contact and slip proxy
 - Grasp stability scoring
 - Benchmark scenes
+
+## Proposed Technical Architecture
+flowchart TD
+    A["User / Developer"]
+
+    B["Blender UI Layer<br/>
+    • Joint sliders<br/>
+    • IK target<br/>
+    • Material selector<br/>
+    • Trajectory controls<br/>
+    • Contact overlays"]
+
+    C["SO101 Digital Twin Core<br/>
+    • Links<br/>
+    • Joints<br/>
+    • Limits<br/>
+    • Forward kinematics<br/>
+    • Basic inverse kinematics<br/>
+    • Gripper state<br/>
+    • TCP pose"]
+
+    D["Haptic Playground<br/>
+    • Material profiles<br/>
+    • Contact detection<br/>
+    • Stiffness / compliance proxy<br/>
+    • Friction / slip score<br/>
+    • Grasp stability score"]
+
+    E["Data + Robotics Interfaces<br/>
+    • Trajectory JSON<br/>
+    • LeRobot replay roadmap<br/>
+    • ROS 2 roadmap<br/>
+    • URDF / USD roadmap<br/>
+    • Isaac Sim roadmap"]
+
+    F["Validation + Benchmarks<br/>
+    • Pick-and-place<br/>
+    • Push-and-slide<br/>
+    • Press-compliance<br/>
+    • Metrics report<br/>
+    • Demo video"]
+
+    A --> B --> C --> D --> E --> F
 
 ## Limitations
 - Not a high-fidelity physics simulator
